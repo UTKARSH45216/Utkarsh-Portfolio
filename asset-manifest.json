@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/utkarsh-portfolio/static/css/main.cee99930.css",
+    "main.js": "/utkarsh-portfolio/static/js/main.c6e483fe.js",
+    "static/js/453.5d110e9c.chunk.js": "/utkarsh-portfolio/static/js/453.5d110e9c.chunk.js",
+    "index.html": "/utkarsh-portfolio/index.html",
+    "main.cee99930.css.map": "/utkarsh-portfolio/static/css/main.cee99930.css.map",
+    "main.c6e483fe.js.map": "/utkarsh-portfolio/static/js/main.c6e483fe.js.map",
+    "453.5d110e9c.chunk.js.map": "/utkarsh-portfolio/static/js/453.5d110e9c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cee99930.css",
+    "static/js/main.c6e483fe.js"
+  ]
+}
