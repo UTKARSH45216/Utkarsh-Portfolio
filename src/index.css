@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-black to-gray-900 text-gray-100 min-h-screen;
+  }
+}
+
+@layer components {
+  .glow {
+    text-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-400 via-pink-500 to-purple-500 bg-clip-text text-transparent;
+  }
+
+  .skill-tag {
+    @apply px-4 py-2 bg-gray-800/50 rounded-full border border-cyan-400/20 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300;
+  }
+
+  .badge {
+    @apply text-xs px-2.5 py-1 rounded-full bg-cyan-400/10 text-cyan-300 border border-cyan-300/20;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-3 rounded-lg font-semibold text-black bg-gradient-to-r from-cyan-400 via-pink-500 to-violet-500 shadow-md shadow-cyan-500/20 hover:brightness-110 transition;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-5 py-3 rounded-lg font-semibold text-cyan-300 border border-cyan-400/30 hover:border-cyan-400/60 hover:text-white transition;
+  }
+
+  .card {
+    @apply rounded-xl border border-white/10 bg-gray-900/50 shadow-lg hover:border-cyan-400/40 transition;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold mb-8 text-center text-cyan-400;
+  }
+
+  .decor-line {
+    @apply h-px w-24 mx-auto bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .nav-link {
+    @apply relative hover:text-cyan-400 transition-colors duration-300 capitalize;
+  }
+  .nav-link::after {
+    content: "";
+    @apply absolute left-1/2 -translate-x-1/2 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-300;
+  }
+  .nav-link:hover::after, .nav-link.active::after {
+    @apply w-6;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(10px, -20px) scale(1.05); }
+  66% { transform: translate(-10px, 10px) scale(0.98); }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-blob { animation: blob 12s ease-in-out infinite; }
